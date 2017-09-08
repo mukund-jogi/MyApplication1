@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class Main2Activity extends AppCompatActivity {
 
     private int addQuantity=0;
-    
+    TextView price;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,13 +43,16 @@ public class Main2Activity extends AppCompatActivity {
     {
        if(addQuantity>0)
        {
-           Toast.makeText(getApplicationContext(),"Your order is placed for :"+addQuantity+" coffee",Toast.LENGTH_LONG).show();
+
+           price.setText("Name: Peter\nQuantity: "+addQuantity+"\nTotalPrice: "+price.getText()+"\nThanks! ");
        }
        else
        {
            Toast.makeText(getApplicationContext(),"Atleast,order 1 coffee!",Toast.LENGTH_LONG).show();
        }
     }
+
+
 
     /**Method to add orders */
     private void display(int i)
@@ -62,9 +65,11 @@ public class Main2Activity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void displayPrice(int i)
     {
-        TextView price = (TextView) findViewById(R.id.textView4);
-        price.setText("$"+price);
+        price = (TextView) findViewById(R.id.textView4);
+        price.setText("$"+i);
 //        price.setText(NumberFormat.getCurrencyInstance().format(i));
     }
+
+
 
 }
