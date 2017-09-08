@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context="myapplication.myapplication.com.myapplication.Main2Activity">
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textAllCaps="true"
+        android:layout_marginBottom="16dp"
+        android:text="Quantity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/subtractbutton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:layout_marginRight="16dp"
+            android:textSize="24sp"
+            android:onClick="decrement_in_order"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="0"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:text="+"
+            android:textSize="24sp"
+            android:onClick="increment_in_order"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OrderSummary"
+        android:textAllCaps="true"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="Submit"
+        android:text="Order" />
+</LinearLayout>
